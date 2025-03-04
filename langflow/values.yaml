@@ -259,6 +259,8 @@ langflow:
       - name: tmp
         mountPath: /tmp
         readOnly: false
+  podAnnotations:
+    sidecar.istio.io/inject: "false"
 
 secretProvider:
   enabled: false
