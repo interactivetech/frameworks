@@ -87,11 +87,11 @@ langflow:
       - --backend-only
     resources:
       requests:
-        cpu: 0.5
-        memory: 1Gi
+        cpu: 3
+        memory: 3Gi
       limits:
-        cpu: 0.5
-        memory: 1Gi
+        cpu: 5
+        memory: 5Gi
     probe:
       failureThreshold: 3
       periodSeconds: 10
