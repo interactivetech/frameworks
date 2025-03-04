@@ -89,9 +89,9 @@ langflow:
       requests:
         cpu: 0.5
         memory: 1Gi
-      # limits:
-      #   cpu: 0.5
-      #   memory: 1Gi
+      limits:
+        cpu: 0.5
+        memory: 1Gi
     probe:
       failureThreshold: 3
       periodSeconds: 10
@@ -236,9 +236,9 @@ langflow:
       requests:
         cpu: 0.3
         memory: 512Mi
-      # limits:
-      #   cpu: 0.3
-      #   memory: 512Mi
+      limits:
+        cpu: 0.3
+        memory: 512Mi
     probe:
       failureThreshold: 3
       periodSeconds: 10
@@ -259,8 +259,6 @@ langflow:
       - name: tmp
         mountPath: /tmp
         readOnly: false
-  podAnnotations:
-    sidecar.istio.io/inject: "false"
 
 secretProvider:
   enabled: false
