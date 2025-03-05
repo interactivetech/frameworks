@@ -95,8 +95,8 @@ langflow:
     probe:
       failureThreshold: 3
       periodSeconds: 10
-      timeoutSeconds: 5
-      initialDelaySeconds: 5
+      timeoutSeconds: 10
+      initialDelaySeconds: 30
     env:
       - name: LANGFLOW_PORT
         value: "7860"
@@ -104,18 +104,18 @@ langflow:
         value: "/app/db/alembic.log"
       - name: LANGFLOW_UPDATE_STARTER_PROJECTS
         value: "false"
-      - name: HTTP_PROXY
-        value: "http://hpeproxy.its.hpecorp.net:443"
-      - name: HTTPS_PROXY
-        value: "http://hpeproxy.its.hpecorp.net:443"
-      - name: http_proxy
-        value: "http://hpeproxy.its.hpecorp.net:443"
-      - name: https_proxy
-        value: "http://hpeproxy.its.hpecorp.net:443"
-      - name: NO_PROXY
-        value: ".external.hpe.local,localhost,.cluster.local,.svc,.default.svc,.apps-upgrade-ezai.hpepcai.com,.ezai-services.svc.cluster.local"     
-      - name: no_proxy
-        value: ".external.hpe.local,localhost,.cluster.local,.svc,.default.svc,.apps-upgrade-ezai.hpepcai.com,.ezai-services.svc.cluster.local"
+#      - name: HTTP_PROXY
+#        value: "http://hpeproxy.its.hpecorp.net:443"
+#      - name: HTTPS_PROXY
+#        value: "http://hpeproxy.its.hpecorp.net:443"
+#      - name: http_proxy
+#        value: "http://hpeproxy.its.hpecorp.net:443"
+#      - name: https_proxy
+#        value: "http://hpeproxy.its.hpecorp.net:443"
+#      - name: NO_PROXY
+#        value: ".external.hpe.local,localhost,.cluster.local,.svc,.default.svc,.apps-upgrade-ezai.hpepcai.com,.ezai-services.svc.cluster.local"     
+#      - name: no_proxy
+#        value: ".external.hpe.local,localhost,.cluster.local,.svc,.default.svc,.apps-upgrade-ezai.hpepcai.com,.ezai-services.svc.cluster.local"
     nodeSelector: {}
     tolerations: []
     affinity: {}
