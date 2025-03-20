@@ -41,4 +41,4 @@ sources:
 - https://github.com/otwld/ollama-helm/
 - https://hub.docker.com/r/ollama/ollama
 - https://charts.bitnami.com/bitnami
-version: 5.4.2
+version: 5.4.0
