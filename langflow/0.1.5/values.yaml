@@ -74,14 +74,14 @@ langflow:
     backendOnly: true
     numWorkers: 1
     image:
-      repository: langflowai/langflow
+      repository: mendeza/langflow
       imagePullPolicy: IfNotPresent
-      tag: latest
+      tag: 1.0.1
     # Updated command: First run the pip install then start langflow
     command:
       - sh
       - -c
-      - "uv pip install weaviate-client==3.26.7 && python -m langflow run --host 0.0.0.0 --backend-only"
+      - "python -m langflow run --host 0.0.0.0 --backend-only"
     resources:
       requests:
         cpu: 2
