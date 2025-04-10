@@ -76,7 +76,7 @@ langflow:
     image:
       repository: mendeza/langflow
       imagePullPolicy: IfNotPresent
-      tag: 1.0.1
+      tag: 1.0.3
     # Updated command: First run the pip install then start langflow
     command:
       - sh
@@ -101,9 +101,6 @@ langflow:
         value: "/app/db/alembic.log"
       - name: LANGFLOW_UPDATE_STARTER_PROJECTS
         value: "false"
-      # Added environment variable for DB connection settings
-      - name: LANGFLOW_DB_CONNECTION_SETTINGS
-        value: '{"pool_size": 20, "max_overflow": 45}'
 #      - name: HTTP_PROXY
 #        value: "http://hpeproxy.its.hpecorp.net:443"
 #      - name: HTTPS_PROXY
